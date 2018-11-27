@@ -1,0 +1,100 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "english space",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "good bye",
+                        "stop",
+                        "bye"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "LaunchRequest",
+                    "slots": [],
+                    "samples": [
+                        "alexis quiz"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PostActivationCodeIntent",
+                    "slots": [
+                        {
+                            "name": "activationCode",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "activate {activationCode}",
+                        "activate a code {activationCode}"
+                    ]
+                },
+                {
+                    "name": "QuizIntent",
+                    "slots": [
+                        {
+                            "name": "groupName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "start {groupName} examination",
+                        "start examination",
+                        "start {groupName} exam",
+                        "start exam",
+                        "start {groupName} test",
+                        "start {groupName} challenge",
+                        "start challenge",
+                        "start test",
+                        "start",
+                        "Start {groupName} Quiz",
+                        "Start Quiz"
+                    ]
+                },
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "answerWord",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "that's {answerWord}",
+                        "it's {answerWord}",
+                        "is {answerWord}",
+                        "this is {answerWord}",
+                        "My answer is {answerWord} "
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

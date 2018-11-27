@@ -1,0 +1,136 @@
+{
+  "name": "Alexis.UI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev-server": "webpack-dev-server --mode development",
+    "test": "jest",
+    "lint": "eslint --quiet --ext .js src",
+    "lint:fix": "eslint --quiet --fix --ext .js src"
+  },
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "./__setups__/localstorage.js"
+    ],
+    "testURL": "http://localhost/",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(antd|rc-pagination|rc-calendar|rc-tooltip|rc-form|rc-util|css-animation)/)"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "no-underscore-dangle": "error",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-native"
+    ],
+    "extends": "airbnb",
+    "rules": {
+      "no-undef": 0,
+      "import/extensions": 0,
+      "import/prefer-default-export": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-unresolved": [
+        "error"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/jsx-no-bind": 0,
+      "linebreak-style": 0,
+      "react/no-string-refs": 1,
+      "react/forbid-prop-types": 1,
+      "no-prototype-builtins": 0
+    }
+  },
+  "dependencies": {
+    "antd": "^3.10.7",
+    "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chart.js": "^2.7.3",
+    "css-loader": "^1.0.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "eslint-plugin-standard": "^3.1.0",
+    "history": "^4.7.2",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "npm": "^6.4.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "react": "^16.4.1",
+    "react-alert": "^4.0.4",
+    "react-alert-template-basic": "^1.0.0",
+    "react-chartjs-2": "^2.7.4",
+    "react-detect-offline": "^2.1.2",
+    "react-dom": "^16.4.1",
+    "react-minimal-pie-chart": "^3.3.0",
+    "react-modal": "^3.6.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-s-alert": "^1.4.1",
+    "react-timeout": "^1.1.2",
+    "react-transition-group": "^2.5.0",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "sinon": "^6.3.4",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "uuid": "^3.3.2",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-plugin-dynamic-import-node": "^2.1.0",
+    "babel-plugin-import": "^1.9.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest": "^23.6.0",
+    "jest-enzyme": "^6.1.2",
+    "jest-localstorage-mock": "^2.3.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.5.2",
+    "redux-mock-store": "^1.5.3",
+    "regenerator-runtime": "^0.12.1",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

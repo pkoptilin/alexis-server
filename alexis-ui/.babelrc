@@ -1,0 +1,22 @@
+{
+  "presets": [["env", {
+    "modules": false
+  }], "stage-0", "react"],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-0", "react"],
+      "plugins": [
+        "transform-class-properties",
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  },
+  "plugins": [
+    "syntax-decorators",
+    "transform-decorators",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+  ]
+}
+

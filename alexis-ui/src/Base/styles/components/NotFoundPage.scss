@@ -1,0 +1,35 @@
+.NotFoundPage{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__txt404{
+        font-size: 25px;
+        margin: 0;
+    }
+    &__main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__404{
+        font-size: 65px;
+        margin: 0;
+        font-weight: 800;
+    }
+    &__info{
+        max-width: 250px
+    }
+    &__list-links{
+        margin: 0;
+        padding: 0;
+    }
+    &__links{
+        color: #001529;
+    }
+    &__exist{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}

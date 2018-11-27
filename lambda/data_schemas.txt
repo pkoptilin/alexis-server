@@ -1,0 +1,68 @@
+DATA SCHEMAS : 
+
+attributes : {
+	quizStep : "quiz_in_progress", /*quiz_in_progress, choose_default_group*/
+
+	failedAttempts : 2,
+
+	answerStatus : answered, /* answered, failed,  failed_once */
+
+	userInfo : {
+	    success: true,
+	    statusCode: 200,
+	    body : {
+	    	failApproach : 1, 
+	    	successApproach : 3,
+	    	defaultGroupId : null
+	    }
+	}, 
+
+	answersBatch : [
+		{
+            rusWordId : 123,  
+            answer : true
+            answerWord : "test"
+        }
+    ], 
+
+    currentAnswer : {
+    	rusWordId : 123,  
+        answer : true
+        answerWord : "test"
+    }, 
+
+    isCorrectAnswer : true,
+
+    currentWordIndex : 2, 
+
+    currentWord : {
+	    wordId: 3,
+	    word: "тест",
+	    audioFileName: "39d477c0-84f1-4c01-82fa-5a6c89a52ddb.mp3",
+	    answers: [
+	        "test"
+	    ]
+	}, 
+
+	currentWordsBatch : [ {
+		wordId : 3,
+		word : "тест",
+		audioFileName : "39d477c0-84f1-4c01-82fa-5a6c89a52ddb.mp3",
+		answers : [
+		        "test"
+		    ]
+	} ], 
+
+	answerStatistics : {
+		wordId1 : {
+			success : 1, 
+			fail : 2
+		}, 
+		wordId2 : {
+			success : 1, 
+			fail : 2
+		}, 
+		...
+	}, 
+
+}

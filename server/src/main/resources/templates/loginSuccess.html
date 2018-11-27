@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login Success</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<h3>
+    <div class="label label-info">
+        Welcome, <span th:text="${name}">user</span>!
+    </div>
+
+    <div class="label label-info">
+        <a href="/alexa/userOtp">Link Alexa</a>
+    </div>
+
+    <div>
+
+        <div>
+            <a href="/logout">Log out</a>
+        </div>
+
+
+</h3>
+
+<input name="code" type="text" maxlength="10" id="codeInp" /> <button onclick="sendUserId()" >Send </button>
+
+<script>
+
+    var userId = '12345';
+
+    function sendUserId() {
+
+        var userOTP = document.getElementById('codeInp').value;
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+        xmlhttp.open("POST", "/alexa/linkUser");
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+        xmlhttp.send(JSON.stringify({userId:userId, userOTP:userOTP}));
+    }
+
+</script>
+</body>
+</html>

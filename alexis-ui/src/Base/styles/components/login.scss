@@ -1,0 +1,38 @@
+.loginpage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    .login-form{
+      &__title{
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+    .login-form-button{
+      width: 100%;
+    }
+    .login-form-forgot{
+      float: right;
+    }
+    .ant-form-item{
+      margin-bottom: 10px;
+    }
+    .ant-form-item-label{
+      line-height: 1.6;
+    }
+    &__box{
+      padding: 25px 15px 15px 15px;
+      background-color: #fff;
+      box-shadow: 0px 1px 11px -4px #8e8888;
+      max-width: 380px;
+      width: 100%;
+    }
+  }
+.logout-wrapper{
+  text-align: center;
+}
+.space-between{
+  display: flex;
+  justify-content: space-between
+}

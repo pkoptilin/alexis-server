@@ -1,0 +1,158 @@
+$ordinary-screen: 1227px;
+$break-medium: 928px;
+$break-medium-2: 680px;
+$break-sm-medium: 600px;
+$break-small: 478px;
+$break-small-2: 346px;
+
+.wordTableContainer{
+   font-size: 14px;
+  word-break: unset;
+  .wordGroupPath{
+    padding: 16px 0;
+  }
+  .ant-table-thead > tr > th{
+    @media screen and (max-width: $break-small) {
+      padding: 16px 5px;
+    }
+  }
+  .ant-table-thead>tr>th .ant-table-filter-icon{
+    vertical-align: -.125em;
+    @media screen and (max-width: $break-medium) {
+      font-size: 12px;
+    }
+  }
+  .ant-table-thead>tr>th .anticon-filter{
+    vertical-align: -.125em;
+    @media screen and (max-width: $break-medium) {
+      font-size: 12px;
+    }
+  }
+  .tableWrap{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 4px;
+    .wordTable{
+      width: 92%;
+      margin: 0 auto;
+      #addGroup-Btn{
+        margin: 10px 0 30px 0;
+        @media screen and (max-width: $break-medium) {
+          font-size: 0.9em;
+        }
+      }
+      .ant-table-body > table{
+        @media screen and (max-width: $break-medium) {
+          font-size: 0.9em;
+        }
+      }
+      .wordsStatus{
+        text-align: center;
+        @media screen and (max-width: $break-small) {
+          width: 22%;
+        }
+        @media screen and (max-width: $break-small-2) {
+          width: 20%;
+        }
+        .status-icon{
+          font-size: 1.7em;
+          @media screen and (max-width: $break-medium) {
+            font-size: 1.5em;
+          }
+          @media screen and (max-width: $break-sm-medium) {
+            font-size: 1.5em;
+          }
+        }
+        @media screen and (max-width: $break-medium) {
+        }
+        .active-status-icon{
+          color: #52c41a;
+        }
+        .disabled-status-icon{
+          color: #fa541c;
+        }
+      }
+      .group-name-col{
+        width:52%;
+        @media screen and (max-width: $ordinary-screen) {
+          width: 43%;
+        }
+        @media screen and (max-width: $break-medium) {
+          width: 39%;
+        }
+        @media screen and (max-width: $break-small) {
+          width: 41%;
+        }
+        @media screen and (max-width: $break-small-2) {
+          width:33%;
+        }
+      }
+      th.actions-col-name{
+        padding-right: 146px;
+
+        @media screen and (max-width: $break-medium) {
+          padding-right: 136px;
+        }
+        @media screen and (max-width: $break-medium-2) {
+           padding-right: 44px;
+        }
+      }
+      .actions-col-name{
+        text-align: right;
+        @media screen and (max-width: $break-sm-medium) {
+        }
+        .actionsCol{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          padding: 17.5px 10px;
+          @media screen and (max-width: $break-medium) {
+            padding: 6px 10px;
+          }
+          span{
+            @media screen and (max-width: $break-medium-2) {
+              width: 100%;
+              padding: 1px 0;
+              text-align: right;
+            }
+            .vertical-divider{
+              @media screen and (max-width: $break-medium-2) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .ant-table-bordered .ant-table-thead > tr > th{
+        border-right: none;
+      }
+      .ant-table-bordered .ant-table-body > table{
+        border: none;
+      }
+      .ant-table-bordered .ant-table-tbody > tr > td{
+        border-right: none;
+      }
+      .ant-table-tbody>tr>td.ant-table-column-sort {
+        background: rgba(0,0,0,.01);
+      }
+      .ant-table-tbody>tr:hover{
+        background: #e6f7ff;
+      }
+      .wordGroup-name{
+        cursor: pointer;
+        padding: 10px;
+        display: block;
+        &::first-letter{
+          text-transform: uppercase;
+        }
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .ant-table-thead > tr > th.ant-table-column-sort{
+        background-color: #fafafa;;
+      }
+    }
+  }
+}

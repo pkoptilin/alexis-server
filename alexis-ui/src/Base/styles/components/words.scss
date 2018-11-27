@@ -1,0 +1,108 @@
+$break-medium-3: 1215px;
+$break-medium-4: 813px;
+$break-medium-5: 700px;
+$break-small-3: 403px;
+$break-m: 992px;
+
+.wordsTable{
+  border-radius: 4px;
+  @media screen and (max-width: $break-medium-5) {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .words-table{
+    font-size: 14px;
+    word-break: unset;
+    background-color: #ffffff;
+    width: 96%;
+    margin: 0 auto;
+    .eng-wrap-input{
+      margin-right: 35px;
+    }
+    .engWord-col{
+      width: 40%;
+      text-align: center;
+    }
+    .rus-name-col{
+      width: 40%;
+      text-align: center;
+    }
+    .remove-word-col-name{
+      width: 10%;
+      text-align: left;
+    }
+    .col-lang{
+      @media screen and (max-width: $break-small-3) {
+        padding-right: 42px;
+      }
+    }
+    .anticon{
+      @media screen and (max-width: $break-medium-5) {
+        font-size: 0.9em;
+      }
+    }
+    @media screen and (max-width: $break-medium-5) {
+      font-size: 0.9em;
+    }
+    .word-gr-name{
+      font-size: 1.2em;
+      padding: 10px 0;
+      &::first-letter{
+        text-transform: uppercase;
+      }
+    }
+    .addWordsBtn{
+      margin-bottom: 20px;
+      @media screen and (max-width: $break-medium-5) {
+        font-size: 0.9em;
+      }
+    }
+    .wordInput{
+      padding-right: 10px;
+      input{
+        @media screen and (max-width: $break-medium-5) {
+        font-size: 0.9em;
+        }
+      }
+    }
+    .remove-word-icon{
+      color: #f35e5e;
+      font-size: 21px;
+      cursor: pointer;
+      &:hover{
+        color: rgb(195, 56, 55);
+      }
+      @media screen and (max-width: $break-medium-5) {
+        font-size: 1.3em;
+      }
+    }
+    .ant-form-inline .ant-form-item-with-help {
+      margin-bottom: 45px;
+    }
+    .ant-table-bordered .ant-table-thead > tr > th{
+      border-right: none;
+      text-align: center;
+    }
+    .ant-table-bordered .ant-table-body > table{
+      border: none;
+      @media screen and (max-width: $break-medium-5) {
+        font-size: 0.9em;
+      }
+    }
+    .ant-table-bordered .ant-table-tbody > tr > td{
+      border-right: none;
+    }
+    .ant-table-tbody>tr>td.ant-table-column-sort {
+      background: rgba(0,0,0,.01);
+    }
+    .ant-table-tbody>tr:hover{
+      background: #e6f7ff;
+    }
+  }
+}
+#defaultField{
+  font-weight: bold;
+}
+.display-class{
+  display: none;
+}

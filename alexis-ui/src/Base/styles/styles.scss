@@ -1,0 +1,112 @@
+@import 'base/settings';
+
+$break-sm-medium: 600px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;}
+  to {opacity: 1;
+  }
+}
+
+@keyframes rowRemove {
+  from {
+    opacity: 1;}
+  to {opacity: 0;
+  }
+}
+
+
+@keyframes rowAdd {
+  from {
+    opacity: 0;}
+  to {opacity: 1;
+  }
+}
+
+.loginpage__box, .page, .NotFoundPage{
+  animation: fadeIn 0.5s;
+}
+
+.ant-table-row{
+  animation: rowAdd 0.5s;
+}
+
+.remove-row{
+  animation: rowRemove 0.5s;
+}
+
+body{
+  background-color: #f5f5f5;
+}
+.page{
+  background-color: #fff;
+  padding: 16px;
+  margin-top: 16px;
+  &__title{
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+}
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wrapper{
+  .mainBlock{
+    width: 77%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    flex: 1;
+    @media screen and (max-width: 746px) {
+     padding-top: 56px;
+    }
+    @media screen and (max-width: $break-sm-medium) {
+      width: 96%;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS */
+  .wrapper{
+    .mainBlock{
+      min-height: 80vh;
+      flex: none;
+    }
+  }
+}
+
+.table-title{
+  text-align: center;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+.static-select{
+  margin: 10px auto 20px auto;
+  width: 300px;
+  .ant-select{
+    width: 100%;
+  }
+}
+.f-letter-up-case, .ant-select-selection-selected-value{
+  &::first-letter{
+    text-transform: uppercase;
+  }
+}
+
+
+// components styles
+@import 'components/worgroup';
+@import 'components/words';
+@import 'components/navigation';
+@import 'components/login';
+@import 'components/alexis-pass';
+@import 'components/profile.scss';
+@import 'components/offline.scss';
+@import 'components/setup.scss';
+@import 'components/NotFoundPage.scss';
+@import 'components/footer.scss';

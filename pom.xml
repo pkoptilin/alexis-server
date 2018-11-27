@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>alexis_server</groupId>
+    <artifactId>alexis_server</artifactId>
+    <version>1.0</version>
+    <modules>
+        <module>server</module>
+        <module>text2speech</module>
+        <module>lambda</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <repositories>
+        <repository>
+            <id>local-alexa-repo</id>
+            <url>file://${basedir}/repo</url>
+        </repository>
+    </repositories>
+
+
+</project>

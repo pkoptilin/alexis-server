@@ -1,0 +1,32 @@
+.profile{
+    &__img{
+        padding: 10px;
+        margin-right: 10px;
+    }
+    &__info{
+        padding: 10px;
+    }
+    &__user-name,
+    &__user-email{
+        font-size: 18px;
+        margin: 0 0 5px 0;
+        span{
+            font-weight: bold;
+        }
+    }
+    &__status{
+        font-weight: bold;
+        font-size: 18px;
+        &-online{
+            color: green;
+            font-weight: normal           
+        }
+        &-offline{
+            color: red;
+            font-weight: normal;
+        }
+    }  
+}
+.btn-right{
+    text-align: right;
+}
