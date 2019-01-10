@@ -1,5 +1,3 @@
-https://join.skype.com/pGX0Ja3g2Fc4
-
 #Docker Sample
 
 docker run --rm --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypass -d mysql:5.6

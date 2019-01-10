@@ -7,12 +7,13 @@
     <groupId>alexis_server</groupId>
     <artifactId>alexis_server</artifactId>
     <version>1.0</version>
+    <packaging>pom</packaging>
+
     <modules>
         <module>server</module>
         <module>text2speech</module>
         <module>lambda</module>
     </modules>
-    <packaging>pom</packaging>
 
     <repositories>
         <repository>
