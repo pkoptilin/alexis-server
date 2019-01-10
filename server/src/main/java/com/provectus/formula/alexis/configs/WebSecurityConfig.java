@@ -25,7 +25,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/user_registration", "/h2", "/alexa/**",
-                        "/api/alexa/quiz/groups/*", "/api/alexa/quiz/stopquiz/*", "/api/skill/*").permitAll()
+                        "/api/alexa/quiz/groups/*", "/api/alexa/quiz/stopquiz/*", "/api/skill/*",
+                        "/index.html", "/dist/*", "/images/*").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic()

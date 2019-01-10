@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>alexis-ui</module>
         <module>server</module>
         <module>text2speech</module>
         <module>lambda</module>
