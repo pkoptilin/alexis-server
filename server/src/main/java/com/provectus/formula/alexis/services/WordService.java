@@ -75,11 +75,24 @@ public class WordService implements WordDAO {
     }
 
     @Override
-    public long insertWordsInGroup(long idGroup, long idEnWord, long idRuWord) {
-        wordRepository.insertWordsInGroup(idGroup, idEnWord, idRuWord);
-        long wordID = wordRepository.idWordsInCurrentGroup(idGroup, idEnWord, idRuWord);
-        statisticRepository.insertStatisticInWord(wordID);
-        return wordID;
+    public long insertWordsInGroup(long idGroup, EnWordEntity enWord, RuWordEntity ruWord) {
+        GroupEntity groupEntity = groupRepository.getOne(idGroup);
+        WordEntity wordEntity = new WordEntity();
+        wordEntity.setEnWordEntity( enWord );
+        wordEntity.setRuWordEntity( ruWord );
+        wordEntity.setWordGroup( groupEntity );
+        WordEntity result = wordRepository.save(wordEntity);
+
+//        wordRepository.insertWordsInGroup(idGroup, idEnWord, idRuWord);
+//        wordRepository.flush();
+//        long wordID = wordRepository.idWordsInCurrentGroup(idGroup, idEnWord, idRuWord);
+        statisticRepository.insertStatisticInWord(result.getId());
+        statisticRepository.flush();
+
+        groupEntity.getWords().add( wordEntity );
+        groupRepository.save( groupEntity );
+
+        return result.getId();
     }
 
     @Override
@@ -114,17 +127,18 @@ public class WordService implements WordDAO {
     }
 
     @Override
-    public WordReturn saveWordToWordGroup(WordReturn word, Long groupId) {
+    public synchronized WordReturn saveWordToWordGroup(WordReturn word, Long groupId) {
 
         if (countWordsInCurrentGroup(groupId, word) < 1) {
-            long idEnWordSave, idRuWordSave;
 
+            EnWordEntity enWordSave;
+            RuWordEntity ruWordSave;
             if (enWordRepository.getByEnWord(word.getEnWord()) == null) {
                 EnWordEntity enWordEntity = new EnWordEntity();
                 enWordEntity.setEnWord(word.getEnWord());
-                idEnWordSave = enWordRepository.saveAndFlush(enWordEntity).getId();
+                enWordSave = enWordRepository.saveAndFlush(enWordEntity);
             } else {
-                idEnWordSave = enWordRepository.getByEnWord(word.getEnWord()).getId();
+                enWordSave = enWordRepository.getByEnWord(word.getEnWord());
             }
             if (ruWordRepository.getByRuWord(word.getRuWord()) == null) {
                 RuWordEntity ruWordEntity = new RuWordEntity();
@@ -136,16 +150,16 @@ public class WordService implements WordDAO {
                 ruWordEntity.setFileName(fileName);
                 word.setFileName(fileName);
 
-                idRuWordSave = ruWordRepository.saveAndFlush(ruWordEntity).getId();
+                ruWordSave = ruWordRepository.saveAndFlush(ruWordEntity);
             } else {
                 RuWordEntity tmpwrd;
                 tmpwrd = ruWordRepository.getByRuWord(word.getRuWord());
-                idRuWordSave = tmpwrd.getId();
+                ruWordSave = tmpwrd;
                 word.setFileName(tmpwrd.getFileName());
             }
 
 
-            word.setId(insertWordsInGroup(groupId, idEnWordSave, idRuWordSave));
+            word.setId(insertWordsInGroup(groupId, enWordSave, ruWordSave));
 
             return word;
         } else {

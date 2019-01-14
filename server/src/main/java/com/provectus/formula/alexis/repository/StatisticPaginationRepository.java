@@ -27,7 +27,7 @@ public interface StatisticPaginationRepository extends PagingAndSortingRepositor
                     "WHERE WORD_GROUP.ID_USER = ?1 " +
                     "      AND STATISTIC.CORRECT_ANSWERS >= ?2",
             nativeQuery = true)
-    Page<StatisticEntity> getLearnedStatisticPageByUserId(int userId, int isLearned, Pageable pageable);
+    Page<StatisticEntity> getLearnedStatisticPageByUserId(long userId, int isLearned, Pageable pageable);
 
     @Query(value = "SELECT " +
             "  STATISTIC.* " +
@@ -69,7 +69,7 @@ public interface StatisticPaginationRepository extends PagingAndSortingRepositor
                     "WHERE WORD_GROUP.ID_USER = ?1 " +
                     "      AND STATISTIC.CORRECT_ANSWERS < ?2",
             nativeQuery = true)
-    Page<StatisticEntity> getInProgressStatisticPageByUserId(int userId, int isLearned, Pageable pageable);
+    Page<StatisticEntity> getInProgressStatisticPageByUserId(long userId, int isLearned, Pageable pageable);
 
     @Query(value = "SELECT " +
             "  STATISTIC.* " +

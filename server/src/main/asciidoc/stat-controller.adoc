@@ -1,0 +1,7 @@
+=== Statistic
+==== Progress
+operation::stat-progress[snippets='curl-request,http-request,http-response']
+==== Learned
+operation::stat-learned[snippets='curl-request,http-request,http-response']
+==== Amount
+operation::stat-amount[snippets='curl-request,http-request,http-response']

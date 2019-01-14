@@ -1,0 +1,11 @@
+=== Alexa
+==== Get one time activation code
+operation::alexa-get-code-success[snippets='curl-request,http-request,http-response']
+====== Unathorized HTTP response
+include::{snippets}/alexa-get-code-unauthorized/http-response.adoc[]
+
+
+==== Link user from Alexa
+operation::alexa-link-user[snippets='curl-request,http-request,http-response']
+====== Failure HTTP responses
+include::{snippets}/alexa-link-user-failed/http-response.adoc[]

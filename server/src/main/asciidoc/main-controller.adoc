@@ -1,0 +1,5 @@
+=== Main
+==== User Registration
+operation::user-registration[snippets='curl-request,http-request,http-response']
+operation::user-details[snippets='curl-request,http-request,http-response']
+
