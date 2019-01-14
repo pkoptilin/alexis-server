@@ -1,0 +1,6 @@
+=== Quiz
+==== Update Quiz
+operation::quiz-update[snippets='curl-request,http-request,http-response']
+
+
+

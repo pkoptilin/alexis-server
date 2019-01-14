@@ -1,0 +1,5 @@
+=== Words
+==== Save Word
+operation::word-save[snippets='curl-request,http-request,http-response']
+==== Get Words for Group
+operation::word-get-list[snippets='curl-request,http-request,http-response']

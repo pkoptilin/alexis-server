@@ -1,14 +1,10 @@
 == Rest convention
 //include::etc/rest_conv.adoc[]
 == Endpoints
-=== Alexa
-==== Get one time activation code
-operation::alexa-get-code-success[snippets='curl-request,http-request,http-response']
-====== Unathorized HTTP response
-include::{snippets}/alexa-get-code-unauthorized/http-response.adoc[]
-
-
-==== Link user from Alexa
-operation::alexa-link-user[snippets='curl-request,http-request,http-response']
-====== Failure HTTP responses
-include::{snippets}/alexa-link-user-failed/http-response.adoc[]
+include::alexa-controller.adoc[]
+include::configuration-controller.adoc[]
+include::main-controller.adoc[]
+include::group-controller.adoc[]
+include::word-controller.adoc[]
+include::quiz-controller.adoc[]
+include::stat-controller.adoc[]

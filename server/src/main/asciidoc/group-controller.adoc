@@ -1,0 +1,14 @@
+=== Word Groups
+==== Save Group
+operation::group-save[snippets='curl-request,http-request,http-response']
+==== Get Groups List
+operation::group-list[snippets='curl-request,http-request,http-response']
+==== Get Group By Id
+operation::group-find-by-id[snippets='curl-request,http-request,http-response']
+==== Update Group
+operation::group-update[snippets='curl-request,http-request,http-response']
+==== Delete Group
+operation::group-delete[snippets='curl-request,http-request,http-response']
+
+
+

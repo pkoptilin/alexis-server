@@ -34,7 +34,7 @@ public interface StatisticRepository extends JpaRepository<StatisticEntity, Long
             "                                       ON WORD_GROUP.ID_USER = USERS.ID " +
             "                                     WHERE USERS.ID = ?1);",
             nativeQuery = true)
-    void cleanQuizByUserId(int userId);
+    void cleanQuizByUserId(long userId);
 
     @Transactional
     @Query(value = "SELECT COUNT(*) " +
@@ -46,7 +46,7 @@ public interface StatisticRepository extends JpaRepository<StatisticEntity, Long
             "WHERE WORD_GROUP.ID_USER = ?1 " +
             "      AND STATISTIC.CORRECT_ANSWERS >= ?2",
             nativeQuery = true)
-    int countLearnedStatisticByUserId(int userId, int isLearned);
+    int countLearnedStatisticByUserId(long userId, int isLearned);
 
     @Transactional
     @Query(value = "SELECT COUNT(*) " +
@@ -70,7 +70,7 @@ public interface StatisticRepository extends JpaRepository<StatisticEntity, Long
             "WHERE WORD_GROUP.ID_USER = ?1 " +
             "      AND STATISTIC.CORRECT_ANSWERS < ?2",
             nativeQuery = true)
-    int countInProgressStatisticByUserId(int userId, int isLearned);
+    int countInProgressStatisticByUserId(long userId, int isLearned);
 
     @Transactional
     @Query(value = "SELECT COUNT(*) " +

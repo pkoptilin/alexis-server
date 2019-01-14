@@ -1,0 +1,13 @@
+=== Configuration
+
+==== Get user configuration
+operation::user-configuration[snippets='curl-request,http-request,http-response']
+
+==== Update user configuration
+operation::user-update-config[snippets='curl-request,http-request,http-response']
+
+==== Get user groups info
+operation::user-groups[snippets='curl-request,http-request,http-response']
+
+==== Get user alexa configuration
+operation::user-alexa-settings[snippets='curl-request,http-request,http-response']

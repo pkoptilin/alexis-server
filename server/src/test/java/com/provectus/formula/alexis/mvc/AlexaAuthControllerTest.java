@@ -1,6 +1,7 @@
-package com.provectus.formula.alexis;
+package com.provectus.formula.alexis.mvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.provectus.formula.alexis.Application;
 import com.provectus.formula.alexis.controlers.AlexaController;
 import com.provectus.formula.alexis.models.entities.UsersEntity;
 import com.provectus.formula.alexis.repository.UserRepository;
@@ -99,7 +100,7 @@ public class AlexaAuthControllerTest {
 
     @Test
     public void testLinkUserFailed() throws Exception {
-        String mockId = "12345";
+        String mockId = "12345-failed";
         String mockOtp = "123456";
 
         Map<String, Object> params = new HashMap<>();

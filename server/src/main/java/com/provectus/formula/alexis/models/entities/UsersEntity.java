@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "USERS")
 public class UsersEntity {
-    private int id;
+    private Long id;
     private String email;
     private String password;
     private String name;
@@ -30,11 +30,11 @@ public class UsersEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = false)
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -96,7 +96,7 @@ public class UsersEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id==null?0:id.hashCode();
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);

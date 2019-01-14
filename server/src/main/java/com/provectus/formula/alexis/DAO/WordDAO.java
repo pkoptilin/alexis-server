@@ -1,6 +1,8 @@
 package com.provectus.formula.alexis.DAO;
 
 import com.provectus.formula.alexis.models.WordReturn;
+import com.provectus.formula.alexis.models.entities.EnWordEntity;
+import com.provectus.formula.alexis.models.entities.RuWordEntity;
 import com.provectus.formula.alexis.models.entities.WordEntity;
 
 import java.util.List;
@@ -17,7 +19,7 @@ public interface WordDAO {
 
     void deleteWordsFromGroup(long wordGroupId, long wordId);
 
-    long insertWordsInGroup(long idGroup, long idEnWord, long idRuWord);
+    long insertWordsInGroup(long idGroup, EnWordEntity enWord, RuWordEntity ruWord);
 
     void deleteAllWordsFromGroup(long wordGroupId);
 
